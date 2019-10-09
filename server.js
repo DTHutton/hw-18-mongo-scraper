@@ -28,5 +28,9 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
+// Routes
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+
 // Connect to the Mongo DB
 mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
