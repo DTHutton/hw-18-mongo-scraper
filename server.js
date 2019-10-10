@@ -2,8 +2,6 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-const axios = require("axios");
-const cheerio = require("cheerio");
 
 // Require all models
 const db = require("./models");
@@ -30,11 +28,11 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Routes
-// require("./routes/apiRoutes")(app);
+require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/mongoScrapeHomework", { useNewUrlParser: true });
 
 // listen function
 app.listen(PORT, function () {
