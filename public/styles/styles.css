@@ -1,0 +1,19 @@
+  body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+  }
+
+  main {
+      flex: 1 0 auto;
+  }
+
+  .page-footer {
+      padding-top: 0px;
+  }
+
+  .foot-pad-adjust {
+      margin-left: 5px;
+      margin-right: 5px;
+      /* width: 100%; */
+  }

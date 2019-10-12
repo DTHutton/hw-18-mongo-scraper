@@ -23,11 +23,9 @@ const scrape = () => {
                 };
                 results.push(resObj);
             }
-
         });
         console.log(results);
         return results;
-
     });
 };
 
