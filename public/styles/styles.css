@@ -17,3 +17,7 @@
       margin-right: 5px;
       /* width: 100%; */
   }
+
+  .picture-frame {
+      opacity: 0.7;
+  }
