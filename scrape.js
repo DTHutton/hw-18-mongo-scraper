@@ -16,12 +16,12 @@ const scrape = () => {
             teaser = $(this).find("p").text();
 
             if (title && link && teaser) {
-                const resObj = {
+                const articles = {
                     title,
                     teaser,
                     link
                 };
-                results.push(resObj);
+                results.push(articles);
             }
         });
         console.log(results);

@@ -1,13 +1,6 @@
-const db = require("../models");
-const axios = require("axios");
-const scrape = require("../controllers/scrape");
+const router = require("express").Router();
+const scrape = require("../controllers/scrapeCon.js");
 
-module.exports = function (app) {
+router.get("/", scrape.scrapedArticles);
 
-    app.get("/scrape", function (req, res) {
-
-        scrape();
-
-    });
-    // res.send("Scrape Complete");
-}
+module.exports = router;
