@@ -2,6 +2,7 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+const path = require("path");
 
 // Require all models
 const db = require("./models");

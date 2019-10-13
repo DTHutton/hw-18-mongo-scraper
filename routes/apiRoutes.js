@@ -1,6 +1,12 @@
-const router = require("express").Router();
-const scrape = require("../controllers/scrapeCon.js");
+const db = require("../models");
+const scrape = require("../scrape.js");
 
-router.get("/", scrape.scrapedArticles);
+module.exports = function (app) {
 
-module.exports = router;
+    app.get("/scrape", function (req, res) {
+
+        scrape();
+        res.render().json();
+
+    });
+}
