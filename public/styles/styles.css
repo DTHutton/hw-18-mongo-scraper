@@ -2,11 +2,25 @@
       display: flex;
       min-height: 100vh;
       flex-direction: column;
+      font-family: "Gotham SSm", Helvetica, Arial, sans-serif;
+      background-color: #f9f9f9;
   }
 
   main {
       flex: 1 0 auto;
   }
+
+  /* NPR Color Schema
+ /--------------------------
+    primary-red: #ff3300; 
+    secondary-red: #d51800;
+    primary-black: #181818; 
+    secondary-black: #393939;
+    primary-blue: #3166cc; 
+    secondary-blue: #83adec;
+    background-color: #f9f9f9;
+    article-widget: #ffffff;
+*/
 
   .page-footer {
       padding-top: 0px;
@@ -15,9 +29,67 @@
   .foot-pad-adjust {
       margin-left: 5px;
       margin-right: 5px;
-      /* width: 100%; */
   }
 
-  .picture-frame {
-      opacity: 0.7;
+  .banner-frame {
+      position: static;
+  }
+
+  .banner {
+      opacity: 0.8;
+      position: static;
+      z-index: 0;
+      /* border-bottom: 1px solid #393939; */
+  }
+
+  .banner-frame-caption-left {
+      position: absolute;
+      left: 190px;
+      top: 140px;
+      z-index: 1;
+      text-align: center;
+  }
+
+  .banner-frame-caption-right {
+      position: absolute;
+      right: 230px;
+      top: 140px;
+      z-index: 1;
+      text-align: center;
+  }
+
+  .caption-text {
+      margin: 10px;
+      padding: 10px;
+      color: #181818;
+  }
+
+  hr {
+      margin: 0px;
+      padding: 0px;
+      border: 1px solid #d51800;
+      background-color: #d51800;
+  }
+
+  .nav-wrapper, .page-footer {
+      background-color: #d51800;
+      color: #393939;
+  }
+
+  .articles-wrapper {
+      position: relative;
+  }
+
+  .scraped-article {
+      background-color: #ffffff;
+      padding: 5px;
+      margin: 2px auto 6px auto;
+  }
+
+  /* .scraped-title {} */
+
+  /* .scraped-teaser {} */
+
+  #saveArticle {
+      margin-top: 22px;
   }
