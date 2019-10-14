@@ -1,31 +1,27 @@
-// const axios = require("axios");
-// const cheerio = require("cheerio");
+const newScrape = document.getElementById("newScrape");
+const articles = document.getElementById("articleHub");
+const articleArray = [];
 
-// const scrape = () => {
+newScrape.addEventListener("click", event => {
 
-//     axios.get("https://www.npr.org").then(function (res) {
+    //TODO data is pulled from db and pushed to articleArray
 
-//         const $ = cheerio.load(res.data);
-//         console.log("scraping...");
-//         const results = [];
+    //TODO forEach() method on array to generate the following html for each article
 
-//         $("div.story-text").each(function (i, element) {
+    //TODO append method or html. I think that's just jQuery though?
+    articles.innerHTML =
+        `
+            <div class="scraped-article z-depth-4">
+                <div class="row">
+                    <h4 class="scraped-title col s10">Article Title</h4>
+                    <button class="col s2 btn waves-effect waves-light center-align" id="saveArticle">
+                        Save Article
+                    </button>
+                </div>
+                <p class="scraped-teaser">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolorem consequatur
+                    pariatur accusamus repellendus expedita amet. Nobis beatae explicabo vero ratione, excepturi enim! Incidunt repudiandae sint, animi commodi nostrum sequi?
+                </p>
+             </div>
+        `
 
-//             title = $(this).find("h3").text();
-//             link = $(this).find("h3").parent().attr("href");
-//             teaser = $(this).find("p").text();
-
-//             if (title && link && teaser) {
-//                 const resObj = {
-//                     title,
-//                     teaser,
-//                     link
-//                 };
-//                 results.push(resObj);
-//             }
-//         });
-//         console.log(results);
-//         return results;
-//     });
-// };
-// scrape();
+})
