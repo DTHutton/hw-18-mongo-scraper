@@ -93,3 +93,7 @@
   #saveArticle {
       margin-top: 22px;
   }
+
+  #newScrape, #saveArticle {
+      background-color: #3166cc;
+  }
