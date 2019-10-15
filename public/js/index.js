@@ -2,13 +2,17 @@ const newScrape = document.getElementById("newScrape");
 const articles = document.getElementById("articleHub");
 const articleArray = [];
 
+
 newScrape.addEventListener("click", event => {
+    event.preventDefault();
 
     //TODO data is pulled from db and pushed to articleArray
 
     //TODO forEach() method on array to generate the following html for each article
+    //* articleArray.forEach(article => console.log(article.title, article.link, article.teaser))
 
-    //TODO append method or html. I think that's just jQuery though?
+    //TODO append method for html. I think that's just jQuery though?
+
     articles.innerHTML =
         `
             <div class="scraped-article z-depth-4">
