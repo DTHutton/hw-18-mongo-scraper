@@ -1,7 +1,7 @@
+
 const newScrape = document.getElementById("newScrape");
 const articles = document.getElementById("articleHub");
 const articleArray = [];
-
 
 newScrape.addEventListener("click", event => {
     event.preventDefault();
@@ -10,26 +10,24 @@ newScrape.addEventListener("click", event => {
         type: "GET",
         url: "/scrape",
         success: function (response) {
-
+            articleArray.push(response)
+            console.log(articleArray)
             //TODO forEach() method on array to generate the following html for each article
-            response.forEach(article => console.log(article.title, article.link, article.teaser))
-
-            //TODO append method for html. I think that's just jQuery though?
-
-            articles.innerHTML =
+            articleArray.forEach(({ link, title, teaser }) => {
+                //TODO append method for html. I think that's just jQuery though?
+                console.log(title, link, teaser)
+                articles.innerHTML = `
+                    <div class="scraped-article z-depth-4">
+                        <div class="row">
+                            <h4 class="scraped-title col s10" href=${link}>${title}</h4>
+                            <button class="col s2 btn waves-effect waves-light center-align" id="saveArticle">
+                                Save Article
+                            </button>
+                        </div>
+                        <p class="scraped-teaser">${teaser}</p>
+                    </div>
                 `
-            <div class="scraped-article z-depth-4">
-                <div class="row">
-                    <h4 class="scraped-title col s10">Article Title</h4>
-                    <button class="col s2 btn waves-effect waves-light center-align" id="saveArticle">
-                        Save Article
-                    </button>
-                </div>
-                <p class="scraped-teaser">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolorem consequatur
-                    pariatur accusamus repellendus expedita amet. Nobis beatae explicabo vero ratione, excepturi enim! Incidunt repudiandae sint, animi commodi nostrum sequi?
-                </p>
-             </div>
-        `
+            })
 
         }
     })

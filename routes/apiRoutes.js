@@ -26,7 +26,7 @@ module.exports = function (app) {
                     results.push(articles);
                 }
             });
-            console.log(results);
+            // console.log(results);
             return results;
         }).then(results => {
             res.json(results);
