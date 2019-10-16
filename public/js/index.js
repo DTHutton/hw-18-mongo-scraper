@@ -12,14 +12,12 @@ newScrape.addEventListener("click", event => {
         success: function (response) {
 
             //TODO forEach() method on array to generate the following html for each article
-            response.forEach(article => {
-                console.log(article.title, article.link, article.teaser))
-        }
+            response.forEach(article => console.log(article.title, article.link, article.teaser))
 
             //TODO append method for html. I think that's just jQuery though?
 
             articles.innerHTML =
-            `
+                `
             <div class="scraped-article z-depth-4">
                 <div class="row">
                     <h4 class="scraped-title col s10">Article Title</h4>
@@ -33,6 +31,6 @@ newScrape.addEventListener("click", event => {
              </div>
         `
 
-    }
+        }
     })
 })
