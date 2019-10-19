@@ -86,7 +86,9 @@
       margin: 2px 15px 6px 15px;
   }
 
-  /* .scraped-title {} */
+  .scraped-title {
+      color: #3166cc
+  }
 
   /* .scraped-teaser {} */
 

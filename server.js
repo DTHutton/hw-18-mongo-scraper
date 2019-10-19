@@ -9,7 +9,7 @@ const db = require("./models");
 
 //express 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // Handlebars
 app.engine(
